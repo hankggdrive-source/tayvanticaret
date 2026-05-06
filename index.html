@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tayvan Ticaret Ofisi | Tayvan–Türkiye Tedarik ve Danışmanlık</title>
+<meta name="description" content="Tayvan'da 14 yıldır faaliyet gösteren ticaret danışmanlığı ofisimiz; tedarikçi bulma, kalite kontrol, fuar ziyareti ve ihracat danışmanlığı hizmetleriyle Tayvan–Türkiye ticaretini kolaylaştırıyor."/>
+<meta name="keywords" content="tayvan tedarikçi bulma, tayvan ticaret danışmanlığı, tayvan ithalat, computex türkiye, tayvan kalite kontrol"/>
+<link rel="canonical" href="https://tayvanticaretofisi.com/"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#F7F6F3;
+  --bg2:#EEECEA;
+  --bg3:#E4E2DE;
+  --ink:#1A1A18;
+  --ink2:#3D3D3A;
+  --soft:#7A7A76;
+  --blue:#1D4ED8;
+  --blue2:#2563EB;
+  --blue3:#DBEAFE;
+  --white:#FFFFFF;
+  --line:#E0DDD8;
+  --line2:rgba(29,78,216,.12);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:400;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;height:68px;
+  background:rgba(247,246,243,.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+  transition:height .3s;
+}
+nav.scrolled{height:58px}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo-sq{
+  width:28px;height:28px;
+  background:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.nav-logo-sq::after{
+  content:'';position:absolute;
+  top:3px;left:3px;right:3px;bottom:3px;
+  border:1px solid rgba(255,255,255,.3);
+}
+.nav-logo-sq span{font-family:'Fraunces',serif;font-size:.85rem;color:#fff;font-weight:300}
+.nav-brand{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);font-weight:300;letter-spacing:.01em}
+.nav-brand strong{font-weight:400;color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-link{font-size:.72rem;letter-spacing:.08em;color:var(--soft);text-decoration:none;transition:color .2s}
+.nav-link:hover{color:var(--ink)}
+.nav-cta{
+  padding:8px 20px;
+  background:var(--blue);color:#fff;
+  font-size:.7rem;letter-spacing:.1em;
+  text-decoration:none;
+  transition:background .2s;
+  font-family:'Inter',sans-serif;
+}
+.nav-cta:hover{background:var(--blue2)}
+
+/* HERO */
+#hero{
+  min-height:100vh;
+  background:var(--white);
+  display:grid;grid-template-columns:1fr 1fr;
+  position:relative;overflow:hidden;
+}
+.hero-geo{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+.hero-geo svg{position:absolute;top:0;right:0;width:60%;opacity:.04}
+.hero-left{
+  padding:160px 60px 80px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;z-index:2;
+  border-right:1px solid var(--line);
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:28px;
+  opacity:0;animation:up .5s .1s ease forwards;
+}
+.hero-eyebrow-dot{width:6px;height:6px;background:var(--blue);border-radius:50%;animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-eyebrow span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.hero-h1{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(2.8rem,4.5vw,4.2rem);
+  line-height:1.1;color:var(--ink);
+  margin-bottom:24px;
+  opacity:0;animation:up .7s .2s ease forwards;
+}
+.hero-h1 em{font-style:italic;color:var(--blue)}
+.hero-p{
+  font-size:.95rem;color:var(--soft);line-height:1.95;
+  max-width:440px;margin-bottom:44px;
+  opacity:0;animation:up .7s .35s ease forwards;
+}
+.hero-btns{
+  display:flex;gap:16px;align-items:center;
+  opacity:0;animation:up .7s .5s ease forwards;
+}
+.btn-main{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--ink);color:var(--white);
+  padding:13px 28px;font-size:.75rem;letter-spacing:.1em;
+  text-decoration:none;transition:background .2s;
+}
+.btn-main:hover{background:var(--blue)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--line);color:var(--ink2);
+  padding:12px 22px;font-size:.75rem;letter-spacing:.1em;
+  text-decoration:none;transition:border-color .2s,color .2s;
+}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.hero-right{
+  background:var(--bg);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:160px 60px 80px 60px;
+  position:relative;z-index:2;
+}
+.hero-cards{display:flex;flex-direction:column;gap:16px}
+.hcard{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:24px 28px;
+  transition:border-color .25s,transform .25s;
+  position:relative;overflow:hidden;
+}
+.hcard:hover{border-color:var(--blue2);transform:translateX(4px)}
+.hcard::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--blue);transform:scaleY(0);transform-origin:top;
+  transition:transform .3s ease;
+}
+.hcard:hover::before{transform:scaleY(1)}
+.hcard-n{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;opacity:.6}
+.hcard-t{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;color:var(--ink);margin-bottom:4px}
+.hcard-d{font-size:.78rem;color:var(--soft);line-height:1.7}
+.hero-badge{
+  margin-top:auto;padding-top:40px;
+  display:flex;align-items:center;gap:12px;
+  opacity:0;animation:up .7s .65s ease forwards;
+}
+.badge-pill{
+  background:var(--blue3);color:var(--blue);
+  padding:5px 14px;font-size:.65rem;letter-spacing:.1em;
+  border-radius:0;
+}
+
+/* SECTION COMMONS */
+.sec{padding:100px 60px}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:12px;
+}
+.tag::before{content:'';width:16px;height:1px;background:var(--blue)}
+h2.title{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(1.9rem,2.8vw,2.6rem);
+  line-height:1.15;color:var(--ink);
+}
+h2.title em{font-style:italic;color:var(--blue)}
+h2.title.inv{color:var(--white)}
+h2.title.inv em{color:#93C5FD}
+
+/* DIVIDER LINE */
+.sep{height:1px;background:var(--line);margin:0 60px}
+
+/* WHY */
+#why{background:var(--white)}
+.why-wrap{display:grid;grid-template-columns:42% 1fr;gap:80px;align-items:start;margin-top:52px}
+.why-left p{font-size:.92rem;color:var(--soft);line-height:1.95;margin-top:14px;max-width:380px}
+.why-nums{display:flex;flex-direction:column;gap:0;margin-top:36px;border-top:1px solid var(--line)}
+.wnum{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:center}
+.wnum-n{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:300;color:var(--blue);line-height:1}
+.wnum-t{font-size:.82rem;color:var(--ink2);line-height:1.5}
+.wnum-t span{display:block;font-size:.72rem;color:var(--soft);margin-top:2px}
+.why-right{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bg2)}
+.wbox{
+  background:var(--white);padding:28px;
+  transition:background .2s;
+}
+.wbox:hover{background:#F9F8F6}
+.wbox-icon{
+  width:32px;height:32px;
+  border:1px solid var(--line2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--blue);margin-bottom:16px;
+}
+.wbox h4{font-size:.9rem;font-weight:500;color:var(--ink);margin-bottom:6px}
+.wbox p{font-size:.78rem;color:var(--soft);line-height:1.8}
+
+/* SERVICES */
+#services{background:var(--bg)}
+.svc-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
+.svc-hd-note{font-size:.8rem;color:var(--soft);max-width:240px;text-align:right;line-height:1.75}
+.svc-list{display:flex;flex-direction:column;gap:1px;background:var(--line)}
+.svc-item{
+  background:var(--bg);padding:36px 42px;
+  display:grid;grid-template-columns:48px 280px 1fr auto;
+  gap:32px;align-items:center;
+  transition:background .2s;cursor:default;
+}
+.svc-item:hover{background:var(--white)}
+.svc-item-n{font-family:'Fraunces',serif;font-size:.72rem;color:var(--soft);font-style:italic}
+.svc-item-t{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:300;color:var(--ink)}
+.svc-item-d{font-size:.8rem;color:var(--soft);line-height:1.8}
+.svc-item-arr{
+  width:36px;height:36px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--soft);flex-shrink:0;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.svc-item:hover .svc-item-arr{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* PROCESS */
+#process{background:var(--ink)}
+.proc-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px}
+.proc-note{font-size:.8rem;color:rgba(255,255,255,.3);max-width:220px;text-align:right;line-height:1.75}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.proc-grid::before{
+  content:'';position:absolute;
+  top:34px;left:calc(12.5%);right:calc(12.5%);
+  height:1px;background:rgba(255,255,255,.08);
+}
+.pstep{padding:0 28px;text-align:center}
+.pstep-ring{
+  width:68px;height:68px;
+  border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 22px;position:relative;z-index:1;
+  background:var(--ink);
+  transition:border-color .3s,background .3s;
+}
+.pstep:hover .pstep-ring{border-color:var(--blue2);background:#0f1c30}
+.pstep-ring span{font-family:'Fraunces',serif;font-size:.82rem;font-style:italic;color:rgba(255,255,255,.4);transition:color .3s}
+.pstep:hover .pstep-ring span{color:#93C5FD}
+.pstep h4{font-family:'Fraunces',serif;font-size:.98rem;font-weight:300;color:rgba(255,255,255,.85);margin-bottom:8px}
+.pstep p{font-size:.76rem;color:rgba(255,255,255,.35);line-height:1.8}
+
+/* LANG STRIP */
+#lang{
+  background:var(--blue);
+  padding:56px 60px;
+  display:flex;align-items:center;justify-content:space-between;gap:32px;
+}
+.lang-left h2{font-family:'Fraunces',serif;font-size:clamp(1.4rem,2vw,1.9rem);font-weight:300;color:#fff;line-height:1.3;margin-bottom:8px}
+.lang-left h2 em{font-style:italic}
+.lang-left p{font-size:.84rem;color:rgba(255,255,255,.6);max-width:360px;line-height:1.8}
+.lang-pills{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}
+.lpill{
+  padding:12px 20px;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.06);
+  display:flex;align-items:center;gap:10px;
+  transition:background .2s;
+}
+.lpill:hover{background:rgba(255,255,255,.12)}
+.lpill-flag{font-size:1rem}
+.lpill-name{font-size:.82rem;color:#fff;font-weight:400}
+
+/* BLOG */
+#blog{background:var(--bg)}
+.blog-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px}
+.blog-all{
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);text-decoration:none;
+  display:flex;align-items:center;gap:6px;
+  border-bottom:1px solid var(--line2);padding-bottom:2px;
+  transition:gap .2s;
+}
+.blog-all:hover{gap:10px}
+.blog-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:1px;background:var(--line)}
+.bcard{
+  background:var(--bg);padding:36px 32px;
+  display:flex;flex-direction:column;
+  transition:background .2s;
+  position:relative;overflow:hidden;
+}
+.bcard:hover{background:var(--white)}
+.bcard-top{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--blue);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .35s ease;
+}
+.bcard:hover .bcard-top{transform:scaleX(1)}
+.bcard-cat{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.bcard h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:300;line-height:1.45;color:var(--ink);margin-bottom:10px}
+.bcard.feat h3{font-size:1.22rem}
+.bcard p{font-size:.78rem;color:var(--soft);line-height:1.85;flex:1;margin-bottom:20px}
+.bcard-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);text-decoration:none;align-self:flex-start;
+  border-bottom:1px solid var(--line2);padding-bottom:2px;
+  transition:gap .2s;
+}
+.bcard-link:hover{gap:10px}
+
+/* CONTACT */
+#contact{
+  background:var(--white);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;
+}
+.c-left{
+  background:var(--ink);
+  padding:90px 60px;
+}
+.c-left .tag{color:#93C5FD}.c-left .tag::before{background:#93C5FD}
+.c-right{padding:90px 60px}
+.c-info{display:flex;flex-direction:column;gap:28px;margin-top:36px}
+.ci{display:flex;gap:14px;align-items:flex-start}
+.ci-ico{
+  width:34px;height:34px;flex-shrink:0;
+  border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(147,197,253,1);
+}
+.ci-body{display:flex;flex-direction:column;gap:3px}
+.ci-l{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.ci-v{font-size:.86rem;color:rgba(255,255,255,.8)}
+.ci-v a{color:#93C5FD;text-decoration:none}
+.ci-v a:hover{text-decoration:underline}
+.cf{display:flex;flex-direction:column;gap:18px}
+.cf h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:4px}
+.cf h3 em{font-style:italic;color:var(--blue)}
+.cf p{font-size:.82rem;color:var(--soft);margin-bottom:8px;line-height:1.8}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.fg label{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+.fg input,.fg textarea,.fg select{
+  background:transparent;border:none;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);padding:10px 0;
+  font-size:.86rem;font-family:'Inter',sans-serif;font-weight:300;
+  outline:none;transition:border-color .2s;width:100%;
+}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-bottom-color:var(--blue)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--soft);opacity:.6}
+.fg textarea{resize:none;height:100px}
+.fg select{color:var(--soft);cursor:pointer}
+.fg select option{background:var(--white);color:var(--ink)}
+.sub-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--ink);color:var(--white);
+  padding:12px 28px;font-size:.7rem;letter-spacing:.12em;
+  text-transform:uppercase;font-family:'Inter',sans-serif;
+  border:none;cursor:pointer;transition:background .2s;align-self:flex-start;
+}
+.sub-btn:hover{background:var(--blue)}
+#fmsg{font-size:.76rem;margin-top:4px;display:none}
+
+/* FOOTER */
+footer{
+  background:var(--ink);
+  padding:24px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.f-logo{font-family:'Fraunces',serif;font-size:.95rem;color:rgba(255,255,255,.35);text-decoration:none;font-weight:300}
+.f-logo em{font-style:normal;color:#93C5FD}
+.f-links{display:flex;gap:22px}
+.f-links a{font-size:.62rem;letter-spacing:.05em;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:rgba(255,255,255,.5)}
+.f-cr{font-size:.62rem;color:rgba(255,255,255,.14)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+@media(max-width:1024px){
+  nav{padding:0 20px}
+  .nav-links .nav-link{display:none}
+  #hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:120px 20px 64px}
+  .sec{padding:72px 20px}
+  .sep{margin:0 20px}
+  #lang{flex-direction:column;padding:48px 20px;gap:24px}
+  #contact{grid-template-columns:1fr}
+  .c-left,.c-right{padding:60px 20px}
+  .svc-item{grid-template-columns:40px 1fr;gap:16px}
+  .svc-item-d{display:none}
+  .svc-item-arr{display:none}
+  .svc-hd{flex-direction:column;align-items:flex-start;gap:8px}
+  .svc-hd-note{text-align:left}
+  .why-wrap{grid-template-columns:1fr;gap:40px}
+  .proc-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .proc-grid::before{display:none}
+  .proc-hd{flex-direction:column;align-items:flex-start;gap:8px}
+  .proc-note{text-align:left}
+  .blog-grid{grid-template-columns:1fr}
+  .blog-hd{flex-direction:column;align-items:flex-start;gap:8px}
+  footer{padding:20px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-sq"><span>T</span></div>
+    <span class="nav-brand">Tayvan <strong>Ticaret</strong> Ofisi</span>
+  </a>
+  <div class="nav-links">
+    <a href="#why" class="nav-link">Hakkımızda</a>
+    <a href="#services" class="nav-link">Hizmetler</a>
+    <a href="#process" class="nav-link">Süreç</a>
+    <a href="blog-fuar-takvimi-2026.html" class="nav-link">Blog</a>
+    <a href="#contact" class="nav-cta">İletişime Geç</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-geo">
+    <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="300" r="280" stroke="#1D4ED8" stroke-width="1"/>
+      <circle cx="300" cy="300" r="200" stroke="#1D4ED8" stroke-width="1"/>
+      <circle cx="300" cy="300" r="120" stroke="#1D4ED8" stroke-width="1"/>
+      <line x1="20" y1="300" x2="580" y2="300" stroke="#1D4ED8" stroke-width="1"/>
+      <line x1="300" y1="20" x2="300" y2="580" stroke="#1D4ED8" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-dot"></div>
+      <span>Taipei &amp; Taichung · 14 yıldır sahada</span>
+    </div>
+    <h1 class="hero-h1">
+      Tayvan'daki<br><em>Ticaret</em><br>Ortağınız
+    </h1>
+    <p class="hero-p">Tayvan'dan ürün tedarik etmek ya da Tayvan pazarına açılmak istiyorsunuz. Doğru üreticiyi bulmak, güvenilirliğini doğrulamak ve iyi fiyata anlaşmak ciddi zaman ve bilgi ister. Bu işi siz için yapıyoruz.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-main">
+        Bizimle Çalışın
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7 2.5l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#services" class="btn-outline">
+        Hizmetlerimiz
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-cards">
+      <div class="hcard rv d1">
+        <div class="hcard-n">Hizmet 01</div>
+        <div class="hcard-t">Tedarikçi Araştırma</div>
+        <div class="hcard-d">Yerinde ziyaret, fiyat karşılaştırma, güvenilirlik kontrolü</div>
+      </div>
+      <div class="hcard rv d2">
+        <div class="hcard-n">Hizmet 02</div>
+        <div class="hcard-t">Fuar Ziyareti &amp; Tercümanlık</div>
+        <div class="hcard-d">Computex, AMPA, Hardware Show — sizin yerinize ya da yanınızda</div>
+      </div>
+      <div class="hcard rv d3">
+        <div class="hcard-n">Hizmet 03</div>
+        <div class="hcard-t">Kalite Kontrol</div>
+        <div class="hcard-d">Üretim süreci takibi, sevkiyat öncesi denetim</div>
+      </div>
+      <div class="hcard rv d4">
+        <div class="hcard-n">Hizmet 04</div>
+        <div class="hcard-t">İhracat Danışmanlığı</div>
+        <div class="hcard-d">Pazar analizi, rakip araştırması, giriş stratejisi</div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span class="badge-pill">Türkçe · 中文 · English</span>
+    </div>
+  </div>
+</section>
+
+<!-- NEDEN BİZ -->
+<div class="sep rv"></div>
+<section id="why" class="sec">
+  <span class="tag rv">Neden Biz?</span>
+  <div class="why-wrap">
+    <div class="rv">
+      <h2 class="title">Tayvan'ı içeriden<br><em>bilen</em> bir ortak</h2>
+      <p>Tayvan'da yaşayan ve çalışan bir ekibiz. Yerel iş kültürünü, güvenilir üreticileri ve piyasanın işleyişini birinci elden biliyoruz. Sizi doğru insanlarla buluşturur, sürecin her adımında yanınızda oluruz.</p>
+      <div class="why-nums">
+        <div class="wnum">
+          <div class="wnum-n">14</div>
+          <div class="wnum-t">Yıl Tayvan'da<span>Taipei ve Taichung'da aktif ofisler</span></div>
+        </div>
+        <div class="wnum">
+          <div class="wnum-n">3</div>
+          <div class="wnum-t">Dil<span>Türkçe, Çince, İngilizce</span></div>
+        </div>
+        <div class="wnum">
+          <div class="wnum-n">2</div>
+          <div class="wnum-t">Ofis<span>Taipei ve Taichung</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="why-right rv d2">
+      <div class="wbox">
+        <div class="wbox-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4>Yerinde ekibimiz var</h4>
+        <p>Uzaktan değil, sahadan çalışıyoruz. Fabrika ziyaretlerini, fuar takiplerini ve müzakereleri bizzat yürütüyoruz.</p>
+      </div>
+      <div class="wbox">
+        <div class="wbox-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h4>Doğrulanmış tedarikçiler</h4>
+        <p>Her üreticiyi ziyaret edip meşruiyetini kontrol etmeden yönlendirmiyoruz. Güvenmeden ilerlemiyoruz.</p>
+      </div>
+      <div class="wbox">
+        <div class="wbox-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h4>Dil engeli yok</h4>
+        <p>Türkçe, Çince ve İngilizce olarak müzakere, yazışma ve tercümanlık desteği veriyoruz.</p>
+      </div>
+      <div class="wbox">
+        <div class="wbox-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        </div>
+        <h4>Uçtan uca yönetim</h4>
+        <p>İlk araştırmadan teslimat takibine kadar her adımı sizin adınıza yürütüyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HİZMETLER -->
+<div class="sep rv"></div>
+<section id="services" class="sec">
+  <div class="svc-hd rv">
+    <div>
+      <span class="tag">Hizmetlerimiz</span>
+      <h2 class="title">Sunduğumuz <em>çözümler</em></h2>
+    </div>
+    <p class="svc-hd-note">Tayvan ticaret sürecinizin her adımında yanınızdayız.</p>
+  </div>
+  <div class="svc-list">
+    <div class="svc-item rv">
+      <span class="svc-item-n">01</span>
+      <div class="svc-item-t">Tedarikçi Araştırma &amp; Doğrulama</div>
+      <div class="svc-item-d">Tayvan'da on binlerce üretici var. Sizin için araştırır, yerinde ziyaret eder, fiyat alır ve karşılaştırmalı rapor sunarız. Aracı değil, gerçek üreticiyle çalışırsınız.</div>
+      <div class="svc-item-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+    <div class="svc-item rv d1">
+      <span class="svc-item-n">02</span>
+      <div class="svc-item-t">Pazar Araştırması &amp; İhracat Danışmanlığı</div>
+      <div class="svc-item-d">Tayvan veya Türkiye pazarına girmeden önce rakip analizi, fiyat trendleri ve dağıtım kanalları hakkında kapsamlı bir değerlendirme sunuyoruz.</div>
+      <div class="svc-item-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+    <div class="svc-item rv d2">
+      <span class="svc-item-n">03</span>
+      <div class="svc-item-t">Fuar Ziyareti &amp; Tercümanlık</div>
+      <div class="svc-item-d">Computex, Taipei AMPA, Taiwan Hardware Show gibi fuarlara gidemiyorsanız bizim ekibimiz gider. Bizzat katılmak isterseniz tercümanlık ve rehberlik sağlarız.</div>
+      <div class="svc-item-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+    <div class="svc-item rv d3">
+      <span class="svc-item-n">04</span>
+      <div class="svc-item-t">Kalite Kontrol &amp; Yerinde Denetim</div>
+      <div class="svc-item-d">Sipariş onaylandıktan sonra üretim sürecini takip ediyoruz. Ara kontroller ve sevkiyat öncesi denetimle ürünün beklentilerinize uygun olduğunu garantiliyoruz.</div>
+      <div class="svc-item-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- SÜREÇ -->
+<section id="process" class="sec">
+  <div class="proc-hd rv">
+    <div>
+      <span class="tag light" style="color:#93C5FD;margin-bottom:12px;display:inline-flex;align-items:center;gap:8px;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase">
+        <span style="display:block;width:16px;height:1px;background:#93C5FD"></span>
+        Nasıl Çalışırız?
+      </span>
+      <h2 class="title inv">Adım adım <em>süreç</em></h2>
+    </div>
+    <p class="proc-note">Her adımı sizinle paylaşıyoruz. Her zaman nerede olduğunuzu bilirsiniz.</p>
+  </div>
+  <div class="proc-grid">
+    <div class="pstep rv d1">
+      <div class="pstep-ring"><span>01</span></div>
+      <h4>Talep &amp; Analiz</h4>
+      <p>Ne aradığınızı, hangi pazara girdiğinizi ve önceliklerinizi birlikte değerlendiriyoruz.</p>
+    </div>
+    <div class="pstep rv d2">
+      <div class="pstep-ring"><span>02</span></div>
+      <h4>Araştırma &amp; Seçim</h4>
+      <p>İhtiyacınıza uygun üreticileri bulup güvenilirliklerini yerinde doğruluyoruz.</p>
+    </div>
+    <div class="pstep rv d3">
+      <div class="pstep-ring"><span>03</span></div>
+      <h4>Fiyat &amp; Müzakere</h4>
+      <p>Birden fazla tedarikçiden teklif alır, karşılaştırır ve sizin için en iyi anlaşmayı müzakere ederiz.</p>
+    </div>
+    <div class="pstep rv d4">
+      <div class="pstep-ring"><span>04</span></div>
+      <h4>Kontrol &amp; Teslimat</h4>
+      <p>Üretim takibi, kalite denetimi ve teslimat sürecini başından sonuna yönetiyoruz.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DİL BANDI -->
+<div id="lang" class="rv">
+  <div class="lang-left">
+    <h2>Türkçe, Çince<br>ve <em>İngilizce</em></h2>
+    <p>Dil farkı bir engel olmaktan çıkıyor. Üç dilde müzakere, yazışma ve tercümanlık desteğiyle tüm süreci sorunsuz yönetiyoruz.</p>
+  </div>
+  <div class="lang-pills">
+    <div class="lpill">
+      <span class="lpill-flag">🇹🇷</span>
+      <span class="lpill-name">Türkçe</span>
+    </div>
+    <div class="lpill">
+      <span class="lpill-flag">🇹🇼</span>
+      <span class="lpill-name">中文</span>
+    </div>
+    <div class="lpill">
+      <span class="lpill-flag">🇬🇧</span>
+      <span class="lpill-name">English</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG -->
+<section id="blog" class="sec">
+  <div class="blog-hd rv">
+    <div>
+      <span class="tag">Bilgi Merkezi</span>
+      <h2 class="title">Güncel <em>rehberler</em></h2>
+    </div>
+    <a href="blog-fuar-takvimi-2026.html" class="blog-all">
+      Tümünü Gör
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="blog-grid">
+    <div class="bcard feat rv d1">
+      <div class="bcard-top"></div>
+      <span class="bcard-cat">Pratik Rehber</span>
+      <h3>Tayvan'dan Alım Yaparken Yapılan 7 Kritik Hata</h3>
+      <p>Yıllar içinde gözlemlediğimiz en yaygın ve maliyetli hatalar. Numune sonrası farklı ürün gelmesinden başlayarak aracı firmalarla çalışmanın risklerine kadar pratikte öğrendiklerimizi paylaştık.</p>
+      <a href="blog-hatalar.html" class="bcard-link">
+        Devamını Oku
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 5.5h9M6 1.5l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="bcard rv d2">
+      <div class="bcard-top"></div>
+      <span class="bcard-cat">Karşılaştırma</span>
+      <h3>Çin mi, Tayvan mı? Tedarikçi Seçiminde Doğru Karar</h3>
+      <p>Kalite, fiyat, teslimat süresi ve güvenilirlik açısından hangi pazarın hangi ürün için daha uygun olduğunu anlattık.</p>
+      <a href="blog-cin-vs-tayvan.html" class="bcard-link">
+        Devamını Oku
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 5.5h9M6 1.5l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="bcard rv d3">
+      <div class="bcard-top"></div>
+      <span class="bcard-cat">İş Kültürü</span>
+      <h3>Tayvan'da İş Yapmanın Kuralları: İlk Toplantıdan Güven İnşasına</h3>
+      <p>Tayvan'lı iş insanlarıyla ilişki kurmanın incelikleri. Sabır, dürüstlük ve nezaketin bu pazarda neden kritik olduğunu sahadan anlattık.</p>
+      <a href="blog-is-kulturu.html" class="bcard-link">
+        Devamını Oku
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 5.5h9M6 1.5l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- İLETİŞİM -->
+<div id="contact">
+  <div class="c-left rv">
+    <span class="tag">İletişim</span>
+    <h2 class="title inv" style="margin-top:10px">Konuşmaya<br><em>başlayalım</em></h2>
+    <p style="font-size:.88rem;color:rgba(255,255,255,.35);line-height:1.95;margin-top:14px;max-width:320px">Aklınızda bir soru varsa yazın. Ne yapmak istediğinizi anlatın, nasıl yardımcı olabileceğimizi birlikte değerlendirelim.</p>
+    <div class="c-info">
+      <div class="ci">
+        <div class="ci-ico">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="ci-body">
+          <span class="ci-l">Ofislerimiz</span>
+          <span class="ci-v">Taipei &amp; Taichung, Tayvan</span>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-ico">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="ci-body">
+          <span class="ci-l">WhatsApp</span>
+          <span class="ci-v"><a href="https://wa.me/886979069914" target="_blank" rel="noopener">+886 979 069 914</a></span>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-ico">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="ci-body">
+          <span class="ci-l">E-posta</span>
+          <span class="ci-v"><a href="mailto:yasintw@gmail.com">yasintw@gmail.com</a></span>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-ico">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="ci-body">
+          <span class="ci-l">Çalışma Saatleri</span>
+          <span class="ci-v">Her gün 08:00–17:00 (TR saati)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c-right rv d2">
+    <form class="cf" id="contactForm">
+      <h3>Mesaj <em>gönderin</em></h3>
+      <p>İlk görüşme ücretsizdir. Sizi arayalım mı, yoksa yazışmayı mı tercih edersiniz?</p>
+      <input type="hidden" name="access_key" value="05b1f0cb-2324-4862-8029-58f9cf52c018"/>
+      <input type="hidden" name="subject" value="tayvanticaretofisi.com — Yeni Mesaj"/>
+      <input type="hidden" name="from_name" value="Tayvan Ticaret Ofisi"/>
+      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
+      <div class="f2">
+        <div class="fg"><label>Ad Soyad</label><input type="text" name="name" placeholder="Adınız" required/></div>
+        <div class="fg"><label>E-posta</label><input type="email" name="email" placeholder="eposta@sirket.com" required/></div>
+      </div>
+      <div class="fg">
+        <label>İlgilendiğiniz Hizmet</label>
+        <select name="service">
+          <option value="">Seçiniz...</option>
+          <option>Tedarikçi Araştırma</option>
+          <option>Pazar Araştırması</option>
+          <option>Fuar Ziyareti / Tercümanlık</option>
+          <option>Kalite Kontrol</option>
+          <option>Genel Danışmanlık</option>
+        </select>
+      </div>
+      <div class="fg"><label>Mesajınız</label><textarea name="message" placeholder="Ne yapmak istediğinizi kısaca yazın..." required></textarea></div>
+      <div id="fmsg"></div>
+      <button type="submit" class="sub-btn" id="fBtn">
+        Mesaj Gönder
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7 2.5l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="f-logo">Tayvan <em>Ticaret</em> Ofisi</a>
+  <div class="f-links">
+    <a href="#">Gizlilik Politikası</a>
+    <a href="#">KVKK</a>
+  </div>
+  <span class="f-cr">© 2026 tayvanticaretofisi.com</span>
+</footer>
+
+<script>
+function reveal(){document.querySelectorAll('.rv:not(.on)').forEach(e=>{if(e.getBoundingClientRect().top<window.innerHeight-60)e.classList.add('on')})}
+reveal();
+window.addEventListener('scroll',reveal,{passive:true});
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>40)},{passive:true});
+
+const form=document.getElementById('contactForm'),btn=document.getElementById('fBtn'),msg=document.getElementById('fmsg');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();btn.textContent='Gönderiliyor...';btn.disabled=true;
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
+    const j=await r.json();
+    if(j.success){msg.style.display='block';msg.style.color='#1D4ED8';msg.textContent='Mesajınız iletildi, en kısa sürede dönüş yapacağız.';form.reset();btn.textContent='Gönderildi ✓';}
+    else throw 0;
+  }catch{msg.style.display='block';msg.style.color='#dc2626';msg.textContent='Hata oluştu. Lütfen yasintw@gmail.com adresine yazın.';btn.textContent='Mesaj Gönder';btn.disabled=false;}
+});
+</script>
+</body>
+</html>
