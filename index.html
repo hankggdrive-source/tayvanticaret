@@ -273,15 +273,7 @@ h2.title.inv em{color:#93C5FD}
 /* BLOG */
 #blog{background:var(--bg)}
 .blog-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px}
-.blog-all{
-  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--blue);text-decoration:none;
-  display:flex;align-items:center;gap:6px;
-  border-bottom:1px solid var(--line2);padding-bottom:2px;
-  transition:gap .2s;
-}
-.blog-all:hover{gap:10px}
-.blog-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:1px;background:var(--line)}
+.blog-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line)}
 .bcard{
   background:var(--bg);padding:36px 32px;
   display:flex;flex-direction:column;
@@ -298,7 +290,6 @@ h2.title.inv em{color:#93C5FD}
 .bcard:hover .bcard-top{transform:scaleX(1)}
 .bcard-cat{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
 .bcard h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:300;line-height:1.45;color:var(--ink);margin-bottom:10px}
-.bcard.feat h3{font-size:1.22rem}
 .bcard p{font-size:.78rem;color:var(--soft);line-height:1.85;flex:1;margin-bottom:20px}
 .bcard-link{
   display:inline-flex;align-items:center;gap:6px;
@@ -309,59 +300,51 @@ h2.title.inv em{color:#93C5FD}
 }
 .bcard-link:hover{gap:10px}
 
-/* CONTACT */
+/* CONTACT — info only */
 #contact{
-  background:var(--white);
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:0;
-}
-.c-left{
   background:var(--ink);
-  padding:90px 60px;
+  padding:100px 60px;
 }
-.c-left .tag{color:#93C5FD}.c-left .tag::before{background:#93C5FD}
-.c-right{padding:90px 60px}
-.c-info{display:flex;flex-direction:column;gap:28px;margin-top:36px}
-.ci{display:flex;gap:14px;align-items:flex-start}
-.ci-ico{
-  width:34px;height:34px;flex-shrink:0;
-  border:1px solid rgba(255,255,255,.1);
+.contact-inner{
+  max-width:1000px;margin:0 auto;
+}
+.contact-head{margin-bottom:60px}
+.light-tag{color:#93C5FD !important}
+.light-tag::before{background:#93C5FD !important}
+.contact-sub{font-size:.92rem;color:rgba(255,255,255,.35);line-height:1.9;margin-top:14px;max-width:400px}
+.contact-cards{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(255,255,255,.06);
+}
+.ccard{
+  background:var(--ink);
+  padding:36px 32px;
+  display:flex;flex-direction:column;gap:0;
+  text-decoration:none;
+  transition:background .25s;
+  position:relative;overflow:hidden;
+}
+.ccard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--blue);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s ease;
+}
+.ccard:not(.no-link):hover{background:#0f1825}
+.ccard:not(.no-link):hover::before{transform:scaleX(1)}
+.ccard-ico{
+  width:44px;height:44px;
+  border:1px solid rgba(255,255,255,.08);
   display:flex;align-items:center;justify-content:center;
-  color:rgba(147,197,253,1);
+  color:rgba(147,197,253,.8);
+  margin-bottom:24px;
+  transition:border-color .25s;
 }
-.ci-body{display:flex;flex-direction:column;gap:3px}
-.ci-l{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
-.ci-v{font-size:.86rem;color:rgba(255,255,255,.8)}
-.ci-v a{color:#93C5FD;text-decoration:none}
-.ci-v a:hover{text-decoration:underline}
-.cf{display:flex;flex-direction:column;gap:18px}
-.cf h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:4px}
-.cf h3 em{font-style:italic;color:var(--blue)}
-.cf p{font-size:.82rem;color:var(--soft);margin-bottom:8px;line-height:1.8}
-.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.fg{display:flex;flex-direction:column;gap:6px}
-.fg label{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
-.fg input,.fg textarea,.fg select{
-  background:transparent;border:none;
-  border-bottom:1px solid var(--line);
-  color:var(--ink);padding:10px 0;
-  font-size:.86rem;font-family:'Inter',sans-serif;font-weight:300;
-  outline:none;transition:border-color .2s;width:100%;
-}
-.fg input:focus,.fg textarea:focus,.fg select:focus{border-bottom-color:var(--blue)}
-.fg input::placeholder,.fg textarea::placeholder{color:var(--soft);opacity:.6}
-.fg textarea{resize:none;height:100px}
-.fg select{color:var(--soft);cursor:pointer}
-.fg select option{background:var(--white);color:var(--ink)}
-.sub-btn{
-  display:inline-flex;align-items:center;gap:9px;
-  background:var(--ink);color:var(--white);
-  padding:12px 28px;font-size:.7rem;letter-spacing:.12em;
-  text-transform:uppercase;font-family:'Inter',sans-serif;
-  border:none;cursor:pointer;transition:background .2s;align-self:flex-start;
-}
-.sub-btn:hover{background:var(--blue)}
-#fmsg{font-size:.76rem;margin-top:4px;display:none}
+.ccard:not(.no-link):hover .ccard-ico{border-color:rgba(147,197,253,.3)}
+.ccard-body{display:flex;flex-direction:column;gap:5px}
+.ccard-label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.ccard-val{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:300;color:#F5F2EC;line-height:1.3}
+.ccard-hint{font-size:.75rem;color:rgba(147,197,253,.6);margin-top:2px}
 
 /* FOOTER */
 footer{
@@ -394,8 +377,8 @@ footer{
   .sec{padding:72px 20px}
   .sep{margin:0 20px}
   #lang{flex-direction:column;padding:48px 20px;gap:24px}
-  #contact{grid-template-columns:1fr}
-  .c-left,.c-right{padding:60px 20px}
+  #contact{padding:72px 20px}
+  .contact-cards{grid-template-columns:1fr 1fr}
   .svc-item{grid-template-columns:40px 1fr;gap:16px}
   .svc-item-d{display:none}
   .svc-item-arr{display:none}
@@ -409,6 +392,9 @@ footer{
   .blog-grid{grid-template-columns:1fr}
   .blog-hd{flex-direction:column;align-items:flex-start;gap:8px}
   footer{padding:20px;flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+  .contact-cards{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -646,18 +632,14 @@ footer{
       <span class="tag">Bilgi Merkezi</span>
       <h2 class="title">Güncel <em>rehberler</em></h2>
     </div>
-    <a href="blog-fuar-takvimi-2026.html" class="blog-all">
-      Tümünü Gör
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
   </div>
   <div class="blog-grid">
-    <div class="bcard feat rv d1">
+    <div class="bcard rv d1">
       <div class="bcard-top"></div>
-      <span class="bcard-cat">Pratik Rehber</span>
-      <h3>Tayvan'dan Alım Yaparken Yapılan 7 Kritik Hata</h3>
-      <p>Yıllar içinde gözlemlediğimiz en yaygın ve maliyetli hatalar. Numune sonrası farklı ürün gelmesinden başlayarak aracı firmalarla çalışmanın risklerine kadar pratikte öğrendiklerimizi paylaştık.</p>
-      <a href="blog-hatalar.html" class="bcard-link">
+      <span class="bcard-cat">Fuar Takvimi · 2026</span>
+      <h3>2026 Tayvan Fuar Takvimi: Computex ve Kaçırılmaması Gereken Etkinlikler</h3>
+      <p>Mart'tan Aralık'a 35'ten fazla fuar, doğru tarihler ve mekanlarıyla. Computex, AMPA, Food Taipei, Taiwan Hardware Show ve daha fazlası için eksiksiz takvim.</p>
+      <a href="blog-fuar-takvimi-2026.html" class="bcard-link">
         Devamını Oku
         <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 5.5h9M6 1.5l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -686,82 +668,57 @@ footer{
 </section>
 
 <!-- İLETİŞİM -->
-<div id="contact">
-  <div class="c-left rv">
-    <span class="tag">İletişim</span>
-    <h2 class="title inv" style="margin-top:10px">Konuşmaya<br><em>başlayalım</em></h2>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.35);line-height:1.95;margin-top:14px;max-width:320px">Aklınızda bir soru varsa yazın. Ne yapmak istediğinizi anlatın, nasıl yardımcı olabileceğimizi birlikte değerlendirelim.</p>
-    <div class="c-info">
-      <div class="ci">
-        <div class="ci-ico">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<section id="contact" class="rv">
+  <div class="contact-inner">
+    <div class="contact-head">
+      <span class="tag light-tag">İletişim</span>
+      <h2 class="title inv" style="margin-top:10px">Bize <em>ulaşın</em></h2>
+      <p class="contact-sub">Tayvan ile ilgili her konuda yanınızdayız. Aşağıdaki kanallardan bize ulaşabilirsiniz.</p>
+    </div>
+    <div class="contact-cards">
+      <a href="https://wa.me/886979069914" target="_blank" rel="noopener" class="ccard">
+        <div class="ccard-ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </div>
-        <div class="ci-body">
-          <span class="ci-l">Ofislerimiz</span>
-          <span class="ci-v">Taipei &amp; Taichung, Tayvan</span>
+        <div class="ccard-body">
+          <span class="ccard-label">WhatsApp</span>
+          <span class="ccard-val">+886 979 069 914</span>
+          <span class="ccard-hint">Mesaj gönderin →</span>
+        </div>
+      </a>
+      <a href="mailto:yasintw@gmail.com" class="ccard">
+        <div class="ccard-ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="ccard-body">
+          <span class="ccard-label">E-posta</span>
+          <span class="ccard-val">yasintw@gmail.com</span>
+          <span class="ccard-hint">E-posta gönderin →</span>
+        </div>
+      </a>
+      <div class="ccard no-link">
+        <div class="ccard-ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="ccard-body">
+          <span class="ccard-label">Ofislerimiz</span>
+          <span class="ccard-val">Taipei &amp; Taichung</span>
+          <span class="ccard-hint">Tayvan</span>
         </div>
       </div>
-      <div class="ci">
-        <div class="ci-ico">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <div class="ccard no-link">
+        <div class="ccard-ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <div class="ci-body">
-          <span class="ci-l">WhatsApp</span>
-          <span class="ci-v"><a href="https://wa.me/886979069914" target="_blank" rel="noopener">+886 979 069 914</a></span>
-        </div>
-      </div>
-      <div class="ci">
-        <div class="ci-ico">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div class="ci-body">
-          <span class="ci-l">E-posta</span>
-          <span class="ci-v"><a href="mailto:yasintw@gmail.com">yasintw@gmail.com</a></span>
-        </div>
-      </div>
-      <div class="ci">
-        <div class="ci-ico">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="ci-body">
-          <span class="ci-l">Çalışma Saatleri</span>
-          <span class="ci-v">Her gün 08:00–17:00 (TR saati)</span>
+        <div class="ccard-body">
+          <span class="ccard-label">Çalışma Saatleri</span>
+          <span class="ccard-val">08:00 – 17:00</span>
+          <span class="ccard-hint">Her gün · Türkiye saatiyle</span>
         </div>
       </div>
     </div>
   </div>
-  <div class="c-right rv d2">
-    <form class="cf" id="contactForm">
-      <h3>Mesaj <em>gönderin</em></h3>
-      <p>İlk görüşme ücretsizdir. Sizi arayalım mı, yoksa yazışmayı mı tercih edersiniz?</p>
-      <input type="hidden" name="access_key" value="05b1f0cb-2324-4862-8029-58f9cf52c018"/>
-      <input type="hidden" name="subject" value="tayvanticaretofisi.com — Yeni Mesaj"/>
-      <input type="hidden" name="from_name" value="Tayvan Ticaret Ofisi"/>
-      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
-      <div class="f2">
-        <div class="fg"><label>Ad Soyad</label><input type="text" name="name" placeholder="Adınız" required/></div>
-        <div class="fg"><label>E-posta</label><input type="email" name="email" placeholder="eposta@sirket.com" required/></div>
-      </div>
-      <div class="fg">
-        <label>İlgilendiğiniz Hizmet</label>
-        <select name="service">
-          <option value="">Seçiniz...</option>
-          <option>Tedarikçi Araştırma</option>
-          <option>Pazar Araştırması</option>
-          <option>Fuar Ziyareti / Tercümanlık</option>
-          <option>Kalite Kontrol</option>
-          <option>Genel Danışmanlık</option>
-        </select>
-      </div>
-      <div class="fg"><label>Mesajınız</label><textarea name="message" placeholder="Ne yapmak istediğinizi kısaca yazın..." required></textarea></div>
-      <div id="fmsg"></div>
-      <button type="submit" class="sub-btn" id="fBtn">
-        Mesaj Gönder
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7 2.5l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </form>
-  </div>
-</div>
+</section>
 
 <footer>
   <a href="/" class="f-logo">Tayvan <em>Ticaret</em> Ofisi</a>
@@ -777,17 +734,6 @@ function reveal(){document.querySelectorAll('.rv:not(.on)').forEach(e=>{if(e.get
 reveal();
 window.addEventListener('scroll',reveal,{passive:true});
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>40)},{passive:true});
-
-const form=document.getElementById('contactForm'),btn=document.getElementById('fBtn'),msg=document.getElementById('fmsg');
-form.addEventListener('submit',async e=>{
-  e.preventDefault();btn.textContent='Gönderiliyor...';btn.disabled=true;
-  try{
-    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
-    const j=await r.json();
-    if(j.success){msg.style.display='block';msg.style.color='#1D4ED8';msg.textContent='Mesajınız iletildi, en kısa sürede dönüş yapacağız.';form.reset();btn.textContent='Gönderildi ✓';}
-    else throw 0;
-  }catch{msg.style.display='block';msg.style.color='#dc2626';msg.textContent='Hata oluştu. Lütfen yasintw@gmail.com adresine yazın.';btn.textContent='Mesaj Gönder';btn.disabled=false;}
-});
 </script>
 </body>
 </html>
