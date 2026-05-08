@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>2026 Tayvan Fuar Takvimi | Computex ve Önemli Ticaret Fuarları</title>
-<meta name="description" content="2026 yılı Tayvan fuar takvimi: Computex, Taipei AMPA, Taiwan Hardware Show ve diğer önemli fuarlar. Hangi fuara gitmeye değer, ne zaman, ne beklenmeli."/>
+<meta name="description" content="2026 yılı Tayvan fuar takvimi: Computex (2–5 Haziran), Taipei AMPA (14–17 Nisan), Food Taipei (24–27 Haziran), Taiwan Hardware Show (20–22 Ekim) ve diğer önemli fuarlar için eksiksiz tarih ve yer bilgisi."/>
 <link rel="canonical" href="https://tayvanticaretofisi.com/blog-fuar-takvimi-2026.html"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -22,6 +22,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:400;display:flex;align-items:cen
 .back:hover{color:var(--blue)}
 .back svg{transition:transform .2s}
 .back:hover svg{transform:translateX(-3px)}
+
 .blog-hero{padding:140px 60px 64px;background:var(--ink);position:relative;overflow:hidden}
 .blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(29,78,216,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(29,78,216,.04) 1px,transparent 1px);background-size:56px 56px}
 .bh-cat{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:#93C5FD;display:flex;align-items:center;gap:8px;margin-bottom:16px;position:relative;z-index:1}
@@ -29,26 +30,75 @@ nav{position:fixed;top:0;left:0;right:0;z-index:400;display:flex;align-items:cen
 .blog-hero h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:300;color:#fff;line-height:1.2;max-width:700px;margin-bottom:18px;position:relative;z-index:1}
 .blog-hero h1 em{font-style:italic;color:#93C5FD}
 .bh-meta{font-size:.74rem;color:rgba(255,255,255,.3);position:relative;z-index:1}
-.blog-content{max-width:720px;margin:0 auto;padding:72px 60px 100px}
-.blog-content h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;margin:48px 0 14px;color:var(--ink)}
+
+.blog-content{max-width:780px;margin:0 auto;padding:72px 60px 100px}
+.blog-content h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;margin:52px 0 14px;color:var(--ink)}
 .blog-content h2 em{font-style:italic;color:var(--blue)}
 .blog-content p{font-size:.93rem;color:var(--soft);line-height:1.95;margin-bottom:16px}
 .blog-content p strong{color:var(--ink2);font-weight:500}
+.blog-content a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(29,78,216,.2)}
+.blog-content a:hover{border-color:var(--blue)}
 
-.fair-table{width:100%;border-collapse:collapse;margin:28px 0 36px}
-.fair-table th{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);text-align:left;padding:12px 16px;border-bottom:2px solid var(--line);font-weight:500}
-.fair-table td{font-size:.86rem;color:var(--soft);padding:14px 16px;border-bottom:1px solid var(--bg2);vertical-align:top;line-height:1.65}
-.fair-table td:first-child{font-family:'Fraunces',serif;font-size:.95rem;color:var(--ink);font-weight:300}
-.fair-table tr:hover td{background:var(--white)}
+/* Filter tabs */
+.filter-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 0}
+.ftab{
+  padding:7px 16px;border:1px solid var(--line);
+  background:var(--white);font-size:.68rem;letter-spacing:.08em;
+  color:var(--soft);cursor:pointer;transition:all .2s;
+  font-family:'Inter',sans-serif;
+}
+.ftab:hover,.ftab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
 
-.highlight{background:var(--blue3);padding:24px 28px;margin:28px 0;border-left:3px solid var(--blue)}
+/* Fair table */
+.fair-table{width:100%;border-collapse:collapse;margin:20px 0 40px}
+.fair-table thead th{
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--blue);text-align:left;
+  padding:10px 14px;border-bottom:2px solid var(--line);font-weight:500;
+}
+.fair-table tbody tr{border-bottom:1px solid var(--bg2);transition:background .15s}
+.fair-table tbody tr:hover{background:var(--white)}
+.fair-table td{padding:13px 14px;vertical-align:middle;line-height:1.55}
+.td-name{font-family:'Fraunces',serif;font-size:.95rem;font-weight:300;color:var(--ink)}
+.td-name a{color:var(--ink);border-bottom:1px solid rgba(0,0,0,.08)}
+.td-name a:hover{color:var(--blue);border-color:rgba(29,78,216,.3)}
+.td-date{font-size:.82rem;color:var(--ink2);white-space:nowrap}
+.td-venue{font-size:.78rem;color:var(--soft)}
+.td-sector{font-size:.72rem}
+.sector-pill{
+  display:inline-block;padding:2px 9px;
+  background:var(--bg2);color:var(--soft);
+  font-size:.62rem;letter-spacing:.06em;
+}
+.sector-pill.tech{background:var(--blue3);color:var(--blue)}
+.sector-pill.auto{background:#FEF3C7;color:#92400E}
+.sector-pill.food{background:#D1FAE5;color:#065F46}
+.sector-pill.machinery{background:#EDE9FE;color:#5B21B6}
+.sector-pill.textile{background:#FCE7F3;color:#9D174D}
+.sector-pill.hardware{background:#FEF2F2;color:#991B1B}
+
+/* Featured fair cards */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin:28px 0 40px}
+.feat-card{
+  background:var(--white);padding:28px 30px;
+  transition:background .2s;position:relative;overflow:hidden;
+}
+.feat-card:hover{background:#FAFAF8}
+.feat-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--blue);transform:scaleX(0);transform-origin:left;
+  transition:transform .35s;
+}
+.feat-card:hover::before{transform:scaleX(1)}
+.fc-tag{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;opacity:.7}
+.fc-name{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:300;color:var(--ink);margin-bottom:6px}
+.fc-date{font-size:.78rem;font-weight:500;color:var(--ink2);margin-bottom:8px}
+.fc-venue{font-size:.74rem;color:var(--soft);margin-bottom:10px}
+.fc-desc{font-size:.8rem;color:var(--soft);line-height:1.75}
+
+.highlight{background:var(--blue3);padding:22px 26px;margin:28px 0;border-left:3px solid var(--blue)}
 .highlight p{color:var(--ink2);margin-bottom:0;font-size:.88rem}
 .highlight p strong{color:var(--blue)}
-
-.fair-feature{background:var(--ink);padding:32px 36px;margin:32px 0;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
-.ff-num{font-family:'Fraunces',serif;font-size:3rem;color:rgba(147,197,253,.15);font-style:italic;line-height:1}
-.ff-content h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:300;color:#fff;margin-bottom:8px}
-.ff-content p{font-size:.84rem;color:rgba(255,255,255,.4);margin-bottom:0;line-height:1.8}
 
 .blog-cta{background:var(--ink);padding:44px;margin-top:52px;text-align:center}
 .blog-cta h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:300;color:#fff;margin-bottom:10px}
@@ -56,14 +106,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:400;display:flex;align-items:cen
 .blog-cta p{font-size:.84rem;color:rgba(255,255,255,.4);margin-bottom:22px}
 .cta-btn{display:inline-flex;align-items:center;gap:9px;background:var(--blue);color:#fff;padding:13px 30px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .cta-btn:hover{background:var(--blue2)}
+
 footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.05);padding:24px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-logo{font-family:'Fraunces',serif;font-size:.95rem;color:rgba(255,255,255,.35);text-decoration:none;font-weight:300}
 .f-logo em{font-style:normal;color:#93C5FD}
 .f-cr{font-size:.62rem;color:rgba(255,255,255,.14)}
-@media(max-width:768px){nav{padding:0 20px}.blog-hero{padding:110px 20px 48px}.blog-content{padding:48px 20px 72px}footer{padding:20px;flex-direction:column}.fair-feature{grid-template-columns:1fr}}
+
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .blog-hero{padding:110px 20px 48px}
+  .blog-content{padding:48px 20px 72px}
+  .feat-grid{grid-template-columns:1fr}
+  .fair-table{font-size:.82rem}
+  .td-venue,.td-sector{display:none}
+  footer{padding:20px;flex-direction:column}
+}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="nav-logo">
     <div class="nav-logo-sq"><span>T</span></div>
@@ -78,106 +139,178 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.05);padding:
 <div class="blog-hero">
   <p class="bh-cat">Fuar Takvimi · 2026</p>
   <h1>2026 Tayvan Fuar Takvimi:<br><em>Computex</em> ve Kaçırılmaması Gereken Etkinlikler</h1>
-  <p class="bh-meta">Tayvan Ticaret Ofisi · Mart 2026</p>
+  <p class="bh-meta">Tayvan Ticaret Ofisi · Mayıs 2026 · Kaynak: Taiwan International Tradeshows / TAITRA</p>
 </div>
 
 <div class="blog-content">
-  <p>Tayvan yılda yüzlerce uluslararası fuara ev sahipliği yapıyor. Elektronikten tekstile, makine ekipmanından gıdaya kadar her sektörde önemli etkinlikler var. Hangisine gitmeye değer? Hangi fuar hangi sektör için kritik? Türkiye'den Tayvan'a ticaret yapan ya da yapmayı planlayan firmalar için 2026'nın öne çıkan fuarlarını derledik.</p>
 
-  <h2>Neden Tayvan <em>fuarları?</em></h2>
-  <p>Çin'deki fuarlarla kıyaslandığında Tayvan fuarları daha küçük ama çok daha odaklı. Burada karşılaştığınız üreticiler genellikle ihracata hazır, İngilizce konuşan ve uluslararası standartları bilen firmalar. Güvenilmez tedarikçiyle karşılaşma ihtimali ciddi ölçüde daha düşük.</p>
-  <p>Fuarda sadece ürün görmüyorsunuz. Sektörün nabzını tutuyorsunuz — hangi teknoloji öne çıkıyor, fiyatlar ne tarafa gidiyor, rakipleriniz ne satın alıyor. Bunların hepsini tek bir çatı altında birkaç günde görmek mümkün.</p>
+  <p>Tayvan her yıl onlarca uluslararası fuara ev sahipliği yapıyor. Elektronikten otomotive, gıdadan tekstile, makineden yarı iletkene kadar pek çok sektörde dünya genelinde yankı uyandıran etkinlikler burada gerçekleşiyor. Aşağıda 2026 yılının tamamlanmış fuar takvimine ulaşabilirsiniz. Tarihler resmi kaynaklardan alınmıştır.</p>
 
-  <h2>2026 yılı <em>öne çıkan fuarlar</em></h2>
+  <h2>Öne çıkan <em>fuarlar</em></h2>
 
-  <table class="fair-table">
-    <tr>
-      <th>Fuar</th>
-      <th>Tarih</th>
-      <th>Yer</th>
-      <th>Sektör</th>
-    </tr>
-    <tr>
-      <td>Computex Taipei</td>
-      <td>Mayıs 2026</td>
-      <td>Taipei, Nangang</td>
-      <td>Bilgisayar, elektronik, yapay zeka donanımı</td>
-    </tr>
-    <tr>
-      <td>Taipei AMPA</td>
-      <td>Nisan 2026</td>
-      <td>Taipei, Nangang</td>
-      <td>Otomotiv parçaları, motosiklet aksesuarları</td>
-    </tr>
-    <tr>
-      <td>Taiwan Expo</td>
-      <td>Mayıs 2026</td>
-      <td>Taipei</td>
-      <td>Genel ticaret, üretim, ihracat</td>
-    </tr>
-    <tr>
-      <td>Taipeiplas</td>
-      <td>Ekim 2026</td>
-      <td>Taipei, Nangang</td>
-      <td>Plastik ve kauçuk işleme makineleri</td>
-    </tr>
-    <tr>
-      <td>Taiwan Hardware Show</td>
-      <td>Ekim 2026</td>
-      <td>Taichung</td>
-      <td>Hırdavat, el aletleri, endüstriyel ürünler</td>
-    </tr>
-    <tr>
-      <td>Taipei Int'l Textile Fair</td>
-      <td>Ekim 2026</td>
-      <td>Taipei</td>
-      <td>Tekstil, kumaş, iplik, teknik tekstil</td>
-    </tr>
-    <tr>
-      <td>Food Taipei</td>
-      <td>Haziran 2026</td>
-      <td>Taipei, Nangang</td>
-      <td>Gıda, içecek, gıda işleme makineleri</td>
-    </tr>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="fc-tag">Teknoloji · Yılın En Büyüğü</div>
+      <div class="fc-name">Computex Taipei 2026</div>
+      <div class="fc-date">2–5 Haziran 2026</div>
+      <div class="fc-venue">Taipei Nangang Exhibition Center (Salon 1 + 2) · TWTC Salon 1</div>
+      <div class="fc-desc">Dünyanın en büyük BT ve elektronik fuarlarından biri. Bilgisayar bileşenleri, yapay zeka donanımı, sunucu sistemleri, oyun ekipmanları ve tüketici elektroniğinde Tayvan'ın küresel ağırlığını en net bu fuarda görürsünüz. Teknoloji ürünleri tedarik etmek isteyen firmalar için onlarca üreticiyle tek seferde görüşme imkânı.</div>
+    </div>
+    <div class="feat-card">
+      <div class="fc-tag">Otomotiv</div>
+      <div class="fc-name">AMPA 2026 — Taipei Int'l Auto Parts &amp; Accessories Show</div>
+      <div class="fc-date">14–17 Nisan 2026</div>
+      <div class="fc-venue">Taipei Nangang Exhibition Center, Salon 1</div>
+      <div class="fc-desc">Otomotiv yedek parçaları ve aksesuarlarında Asya'nın önde gelen fuarlarından biri. Aynı tarihlerde E-Mobility Taiwan 2026 da eş zamanlı düzenleniyor. Otomotiv sektöründe çalışan firmalar için hem geleneksel hem de elektrikli araç ekipmanlarını tek bir ziyarette inceleme fırsatı sunuyor.</div>
+    </div>
+    <div class="feat-card">
+      <div class="fc-tag">Gıda &amp; Ambalaj</div>
+      <div class="fc-name">Food Taipei 2026</div>
+      <div class="fc-date">24–27 Haziran 2026</div>
+      <div class="fc-venue">Taipei Nangang Exhibition Center, Salon 1 + 2 · TWTC Salon 1</div>
+      <div class="fc-desc">Gıda, içecek ve gıda işleme ekipmanlarında Tayvan'ın en kapsamlı fuarı. Aynı tarihlerde Taipei International Packaging Industry Show, Foodtech &amp; Bio/Pharmatech Taipei ve HR Taiwan da eş zamanlı gerçekleşiyor. Gıda sektörü için son derece yoğun bir hafta.</div>
+    </div>
+    <div class="feat-card">
+      <div class="fc-tag">Hırdavat &amp; Endüstriyel</div>
+      <div class="fc-name">Taiwan Industry Week — Taiwan Hardware Show 2026</div>
+      <div class="fc-date">20–22 Ekim 2026</div>
+      <div class="fc-venue">Taipei Nangang Exhibition Center, Salon 2</div>
+      <div class="fc-desc">Hırdavat, el aletleri, soğutma ve HVAC ekipmanlarında Tayvan'ın temel ticaret platformu. Aynı çatı altında International Metal Technology Taiwan ve Occupational Safety Taiwan da düzenleniyor. Taichung'daki sanayi bölgesiyle birleştirildiğinde verimli bir endüstriyel tur imkânı sunuyor.</div>
+    </div>
+  </div>
+
+  <h2>2026 tam fuar <em>takvimi</em></h2>
+
+  <div class="filter-wrap" id="filters">
+    <button class="ftab active" onclick="filterTable('all',this)">Tümü</button>
+    <button class="ftab" onclick="filterTable('tech',this)">Teknoloji</button>
+    <button class="ftab" onclick="filterTable('auto',this)">Otomotiv</button>
+    <button class="ftab" onclick="filterTable('food',this)">Gıda</button>
+    <button class="ftab" onclick="filterTable('machinery',this)">Makine</button>
+    <button class="ftab" onclick="filterTable('textile',this)">Tekstil</button>
+    <button class="ftab" onclick="filterTable('hardware',this)">Hırdavat</button>
+  </div>
+
+  <table class="fair-table" id="fairTable">
+    <thead>
+      <tr>
+        <th style="width:36%">Fuar</th>
+        <th style="width:18%">Tarih</th>
+        <th style="width:28%">Mekan</th>
+        <th style="width:18%">Sektör</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- MART -->
+      <tr data-cat="food"><td class="td-name">TIBS — Taipei Int'l Bakery Show 2026</td><td class="td-date">12–15 Mart</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill food">Gıda</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Smart City Summit &amp; Expo 2026</td><td class="td-date">17–20 Mart</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill tech">Teknoloji</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Taipei Int'l Cycle Show (Taipei Cycle) 2026</td><td class="td-date">25–28 Mart</td><td class="td-venue">Nangang Salon 1 + 2</td><td class="td-sector"><span class="sector-pill">Bisiklet</span></td></tr>
+      <tr data-cat="other"><td class="td-name">TaiSPO — Sports &amp; Fitness Taiwan 2026</td><td class="td-date">25–28 Mart</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill">Spor</span></td></tr>
+
+      <!-- NİSAN -->
+      <tr data-cat="tech"><td class="td-name">SMART Manufacturing Taiwan 2026</td><td class="td-date">8–10 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill tech">Üretim / Teknoloji</span></td></tr>
+      <tr data-cat="tech"><td class="td-name">TOUCH TAIWAN — Smart Display Show 2026</td><td class="td-date">8–10 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill tech">Ekran / Teknoloji</span></td></tr>
+      <tr data-cat="tech"><td class="td-name">Electronic Equipment Exhibition 2026</td><td class="td-date">8–10 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill tech">Elektronik</span></td></tr>
+      <tr data-cat="auto"><td class="td-name"><strong>AMPA 2026</strong> — Taipei Int'l Auto Parts &amp; Accessories Show</td><td class="td-date">14–17 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill auto">Otomotiv</span></td></tr>
+      <tr data-cat="auto"><td class="td-name">E-Mobility Taiwan 2026</td><td class="td-date">14–17 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill auto">EV / Elektrikli Araç</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Secutech 2026 — Güvenlik Teknolojileri Fuarı</td><td class="td-date">22–24 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Güvenlik</span></td></tr>
+      <tr data-cat="machinery"><td class="td-name">Wood Taiwan 2026 — Ahşap &amp; Mobilya Üretim Fuarı</td><td class="td-date">23–26 Nisan</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill machinery">Makine / Mobilya</span></td></tr>
+
+      <!-- MAYIS -->
+      <tr data-cat="other"><td class="td-name">AT Life — Assistive Technology for Life 2026</td><td class="td-date">14–17 Mayıs</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Sağlık</span></td></tr>
+
+      <!-- HAZİRAN -->
+      <tr data-cat="tech"><td class="td-name"><strong>Computex Taipei 2026</strong></td><td class="td-date">2–5 Haziran</td><td class="td-venue">Nangang Salon 1 + 2 · TWTC Salon 1</td><td class="td-sector"><span class="sector-pill tech">BT / Elektronik</span></td></tr>
+      <tr data-cat="food"><td class="td-name"><strong>Food Taipei 2026</strong></td><td class="td-date">24–27 Haziran</td><td class="td-venue">Nangang Salon 1 + 2 · TWTC Salon 1</td><td class="td-sector"><span class="sector-pill food">Gıda</span></td></tr>
+      <tr data-cat="machinery"><td class="td-name">Taipei Int'l Packaging Industry Show 2026</td><td class="td-date">24–27 Haziran</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill machinery">Ambalaj / Makine</span></td></tr>
+      <tr data-cat="food"><td class="td-name">Foodtech &amp; Bio/Pharmatech Taipei 2026</td><td class="td-date">24–27 Haziran</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill food">Gıda Teknolojisi</span></td></tr>
+      <tr data-cat="food"><td class="td-name">HR Taiwan — Int'l Hotel, Restaurant &amp; Catering Show</td><td class="td-date">24–27 Haziran</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill food">HORECA</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Medical Taiwan 2026 — Medikal &amp; Sağlık Fuarı</td><td class="td-date">25–27 Haziran</td><td class="td-venue">TWTC Salon 1</td><td class="td-sector"><span class="sector-pill">Medikal</span></td></tr>
+
+      <!-- TEMMUZ -->
+      <tr data-cat="other"><td class="td-name">2026 Taipei Pets Show</td><td class="td-date">3–6 Temmuz</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Evcil Hayvan</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Taiwan Motorcycle Show 2026</td><td class="td-date">10–12 Temmuz</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill auto">Motosiklet</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Bio Asia-Taiwan 2026 — Biyoteknoloji Fuarı</td><td class="td-date">16–19 Temmuz</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Biyoteknoloji</span></td></tr>
+
+      <!-- AĞUSTOS -->
+      <tr data-cat="machinery"><td class="td-name">Taipei Automation 2026 — Endüstriyel Otomasyon</td><td class="td-date">19–22 Ağustos</td><td class="td-venue">Nangang Salon 1 + 2</td><td class="td-sector"><span class="sector-pill machinery">Otomasyon / Robot</span></td></tr>
+      <tr data-cat="machinery"><td class="td-name">TAIROS — Taiwan Automation Intelligence &amp; Robot Show</td><td class="td-date">19–22 Ağustos</td><td class="td-venue">Nangang Salon 1 + 2</td><td class="td-sector"><span class="sector-pill machinery">Robot</span></td></tr>
+      <tr data-cat="machinery"><td class="td-name">TAIMOLD — Taipei Int'l Smart Mold &amp; Die Industry Fair</td><td class="td-date">19–22 Ağustos</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill machinery">Kalıp / Makine</span></td></tr>
+      <tr data-cat="machinery"><td class="td-name">Taipei Int'l Fluid Power Exhibition 2026</td><td class="td-date">19–22 Ağustos</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill machinery">Makine</span></td></tr>
+      <tr data-cat="tech"><td class="td-name">Laser &amp; Photonics Taiwan 2026</td><td class="td-date">19–22 Ağustos</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill tech">Lazer / Teknoloji</span></td></tr>
+      <tr data-cat="tech"><td class="td-name">Taiwan 3D Printing &amp; Additive Manufacturing Show</td><td class="td-date">19–22 Ağustos</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill tech">3D Baskı</span></td></tr>
+
+      <!-- EYLÜL -->
+      <tr data-cat="tech"><td class="td-name">SEMICON Taiwan 2026</td><td class="td-date">2–4 Eylül</td><td class="td-venue">Nangang Salon 1 + 2</td><td class="td-sector"><span class="sector-pill tech">Yarı İletken</span></td></tr>
+      <tr data-cat="machinery"><td class="td-name">Taipei Int'l Plastics &amp; Rubber Industry Show (Taipeiplas)</td><td class="td-date">15–19 Eylül</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill machinery">Plastik / Kauçuk</span></td></tr>
+
+      <!-- EKİM -->
+      <tr data-cat="textile"><td class="td-name">TITAS 2026 — Taipei Innovative Textile Application Show</td><td class="td-date">6–8 Ekim</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill textile">Tekstil</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Energy Taiwan / Net-Zero Taiwan 2026</td><td class="td-date">14–16 Ekim</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Enerji</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Taiwan Int'l Water Week (TIWW) 2026</td><td class="td-date">14–16 Ekim</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Çevre / Su</span></td></tr>
+      <tr data-cat="tech"><td class="td-name">TPCA Show Taipei 2026 — Printed Circuit</td><td class="td-date">20–22 Ekim</td><td class="td-venue">Nangang Salon 1 + 2</td><td class="td-sector"><span class="sector-pill tech">Elektronik / PCB</span></td></tr>
+      <tr data-cat="tech"><td class="td-name">Taitronics / AIoT Taiwan 2026</td><td class="td-date">20–22 Ekim</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill tech">Elektronik / IoT</span></td></tr>
+      <tr data-cat="hardware"><td class="td-name"><strong>Taiwan Hardware Show 2026</strong> (Taiwan Industry Week)</td><td class="td-date">20–22 Ekim</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill hardware">Hırdavat</span></td></tr>
+      <tr data-cat="hardware"><td class="td-name">International Metal Technology Taiwan 2026</td><td class="td-date">20–22 Ekim</td><td class="td-venue">Nangang Salon 2</td><td class="td-sector"><span class="sector-pill hardware">Metal / Endüstriyel</span></td></tr>
+
+      <!-- KASIM -->
+      <tr data-cat="food"><td class="td-name">Taiwan Int'l Food Industry Show 2026</td><td class="td-date">13–16 Kasım</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill food">Gıda</span></td></tr>
+
+      <!-- ARALIK -->
+      <tr data-cat="other"><td class="td-name">Healthcare Expo Taiwan 2026</td><td class="td-date">3–6 Aralık</td><td class="td-venue">Nangang Salon 1</td><td class="td-sector"><span class="sector-pill">Sağlık</span></td></tr>
+      <tr data-cat="other"><td class="td-name">Taipei Building Show 2026</td><td class="td-date">10–13 Aralık</td><td class="td-venue">TWTC Salon 1</td><td class="td-sector"><span class="sector-pill">İnşaat</span></td></tr>
+    </tbody>
   </table>
 
-  <div class="fair-feature">
-    <div class="ff-num">01</div>
-    <div class="ff-content">
-      <h3>Computex — Neden bu kadar önemli?</h3>
-      <p>Computex, dünyanın en büyük BT ve elektronik fuarlarından biri. Her yıl Mayıs ayında 150'den fazla ülkeden ziyaretçi çekiyor. Bilgisayar bileşenleri, sunucu sistemleri, yapay zeka donanımları, oyun ekipmanları ve tüketici elektroniğinde Tayvan'ın küresel üretim merkezi olduğunu en net bu fuarda görüyorsunuz. Teknoloji ürünleri ithal etmek isteyen Türk firmaları için onlarca üreticiyle tek seferde tanışmanın en verimli yolu.</p>
-    </div>
+  <div class="highlight">
+    <p><strong>Not:</strong> Tüm tarihler TAITRA ve resmi organizatörlerin 2026 takviminden alınmıştır. Tarihler güncellenebilir; katılım planlamadan önce ilgili fuarın resmi web sitesini kontrol etmenizi öneririz. Taipei Nangang Exhibition Center'ın Salon 1 (TaiNEX 1) ve Salon 2 (TaiNEX 2) olmak üzere iki ayrı binası bulunuyor.</p>
   </div>
 
-  <div class="fair-feature">
-    <div class="ff-num">02</div>
-    <div class="ff-content">
-      <h3>Taiwan Hardware Show — Taichung'un kalbi</h3>
-      <p>Hırdavat, el aletleri ve endüstriyel ürünlerde Tayvan küresel bir üretim üssü. Taiwan Hardware Show bu sektörde faaliyet gösteren firmalar için doğrudan üreticiyle buluşmanın en önemli platformu. Taichung'un sanayi bölgesinde düzenlenmesi, fabrika ziyaretleriyle birleştirme imkânı da sunuyor.</p>
-    </div>
-  </div>
+  <h2>Türk firmaları için <em>öne çıkanlar</em></h2>
+  <p>Hangi fuarın işinize yarayacağı büyük ölçüde sektörünüze bağlı. Genel bir değerlendirme yapmak gerekirse:</p>
+  <p><strong>Teknoloji ve elektronik:</strong> Computex (Haziran) ve Taitronics/AIoT Taiwan (Ekim) öncelikli tercihler.</p>
+  <p><strong>Otomotiv ve motosiklet:</strong> AMPA ile E-Mobility Taiwan (Nisan), kısa araçlarla yan yana gerçekleşiyor.</p>
+  <p><strong>Gıda ve HORECA:</strong> Food Taipei haftası (Haziran) birden fazla fuarı bir arada sunuyor — tek ziyarete değer.</p>
+  <p><strong>Plastik ve makine:</strong> Taipeiplas (Eylül) ile Taipei Automation (Ağustos) kendi alanlarında Asya'nın önde gelen platformları.</p>
+  <p><strong>Tekstil:</strong> TITAS (Ekim) teknik tekstil ve yenilikçi kumaşlarda Tayvan'ın en önemli buluşma noktası.</p>
+  <p><strong>Hırdavat ve endüstriyel ürünler:</strong> Taiwan Hardware Show (Ekim), Taichung'daki fabrika bölgesiyle birleştirilerek kapsamlı bir tedarikçi turuna dönüştürülebilir.</p>
 
   <div class="highlight">
-    <p><strong>Pratik bilgi:</strong> Fuarlara katılım çoğunlukla ücretsiz ama kayıt gerekiyor. Vize, konaklama ve ulaşım için en az 2 ay öncesinden planlama yapmanızı öneririz. Fuar dönemlerinde Taipei otellerinin doluluk oranı hızla artıyor ve fiyatlar yükseliyor.</p>
+    <p><strong>Pratik bilgi:</strong> Fuarlara kayıt genellikle ücretsiz ancak önceden gerekli. Özellikle Computex döneminde Taipei otelleri hızla dolduğundan en az 6–8 hafta öncesinden rezervasyon yaptırmanızı öneririz. Vize için Tayvan Ticaret Ofisi aracılığıyla davetiye mektubu temin edilebilir.</p>
   </div>
 
   <h2>Fuara gidemiyorsanız <em>biz gidiyoruz</em></h2>
-  <p>Her fuara bizzat gitmek mümkün olmayabilir. Bizim ekibimiz zaten Taipei ve Taichung'da yerleşik. Hangi fuarla ilgilendiğinizi söyleyin; sizin adınıza katılır, ilgilendiğiniz ürünleri inceler, üreticilerle görüşür, numune talep eder ve size ayrıntılı rapor sunarız.</p>
-  <p>Bizzat gelmek istiyorsanız da yanınızda oluyoruz. Tercümanlık, üretici randevuları, ulaşım ve konaklama organizasyonunda destek sağlarız.</p>
+  <p>Her fuara bizzat gitmek her zaman mümkün olmayabilir. Ekibimiz zaten Taipei ve Taichung'da yerleşik. Hangi fuarla ilgilendiğinizi söyleyin; sizin adınıza katılır, ürünleri yerinde inceler, üreticilerle görüşür, numune talep eder ve size ayrıntılı bir rapor sunarız.</p>
+  <p>Bizzat gelmek isteyenler için tercümanlık, fabrika randevusu, ulaşım ve konaklama organizasyonunda da destek sağlıyoruz.</p>
 
   <div class="blog-cta">
     <h3>Bir sonraki fuar için<br><em>plan yapalım</em></h3>
-    <p>Hangi fuara gitmeyi düşündüğünüzü söyleyin, size özel bir plan çıkaralım.</p>
+    <p>Hangi fuara gitmeyi düşündüğünüzü söyleyin, size özel bir yol haritası çıkaralım.</p>
     <a href="index.html#contact" class="cta-btn">
       Bizimle İletişime Geçin
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7 2.5l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
+
 </div>
 
 <footer>
   <a href="index.html" class="f-logo">Tayvan <em>Ticaret</em> Ofisi</a>
   <span class="f-cr">© 2026 tayvanticaretofisi.com</span>
 </footer>
+
+<script>
+function filterTable(cat, btn) {
+  document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#fairTable tbody tr').forEach(row => {
+    if (cat === 'all' || row.dataset.cat === cat) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+}
+</script>
 </body>
 </html>
